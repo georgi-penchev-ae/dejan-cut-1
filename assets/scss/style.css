@@ -1,13 +1,7 @@
-$color-primary: #253353;
-$color-secondary: #c2002f;
-$color-primaryLight: #b8dbf1;
-
 body {
   display: flex;
   font-family: "Montserrat", sans-serif;
 }
-
-//  Header
 
 .header {
   padding: 2rem 4rem;
@@ -26,11 +20,10 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 0.25rem;
-
-  &-img {
-    display: block;
-    padding-top: 1rem;
-  }
+}
+.header__logo-img {
+  display: block;
+  padding-top: 1rem;
 }
 
 .header__nav {
@@ -58,12 +51,9 @@ body {
   padding: 1rem 0.5rem;
   font-weight: 600;
   cursor: pointer;
-
-  &.active {
-    .arrow {
-      transform: rotate(-135deg);
-    }
-  }
+}
+.header__nav-toggle.active .arrow {
+  transform: rotate(-135deg);
 }
 
 .arrow {
@@ -103,36 +93,34 @@ body {
   justify-content: center;
   gap: 0.6rem;
   cursor: pointer;
-  &.active {
-    .arrow {
-      transform: rotate(-135deg);
-    }
-  }
+}
+.header__button.active .arrow {
+  transform: rotate(-135deg);
 }
 
 .login {
-  background: $color-primary;
+  background: #253353;
 }
+
 .contact {
-  background: $color-secondary;
+  background: #c2002f;
 }
 
 .header__button-search {
   padding: 0.6rem 0.8rem 0.6rem 0.8rem;
   border: none;
   border-radius: 100px;
-  background-color: $color-primaryLight;
+  background-color: #b8dbf1;
   cursor: pointer;
-
-  &.active {
-    background-color: #fff;
-  }
+}
+.header__button-search.active {
+  background-color: #fff;
 }
 
 .header__dropdown {
   display: none;
   position: absolute;
-  background: $color-primary;
+  background: #253353;
   border: 1px solid #ccc;
   margin-top: 0.5rem;
   padding: 1rem;
@@ -141,9 +129,9 @@ body {
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
   width: 250px;
-  &.active {
-    display: block;
-  }
+}
+.header__dropdown.active {
+  display: block;
 }
 
 .header__dropdown-item {
@@ -164,11 +152,12 @@ body {
   color: #fff;
   text-align: left;
 }
+
 .header__dropdown-item a:hover {
-  color: $color-primary;
-  .arrow {
-    border-color: $color-primary;
-  }
+  color: #253353;
+}
+.header__dropdown-item a:hover .arrow {
+  border-color: #253353;
 }
 
 .header__nav-item {
@@ -179,14 +168,15 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  background-color: $color-primary;
+  background-color: #253353;
   border-radius: 8px;
   width: 200px;
   display: none;
-  &.active {
-    display: block;
-  }
 }
+.doropdown__submenu-container.active {
+  display: block;
+}
+
 .dropdown__submenu {
   list-style: none;
   display: flex;
@@ -207,22 +197,23 @@ body {
   position: absolute;
   top: 6.8rem;
   right: 8.2rem;
-  background: $color-primary;
+  background: #253353;
   margin-top: 0.5rem;
   padding: 1rem;
   z-index: 10;
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
   width: 300px;
-  &.active {
-    display: block;
-  }
+}
+.login__container.active {
+  display: block;
 }
 
 .login__form-dropdown {
   display: flex;
   justify-content: space-between;
 }
+
 #dropdown-select {
   width: 100%;
   border: none;
@@ -231,6 +222,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
 }
+
 .dropdown__labels {
   display: block;
   color: #fff;
@@ -263,7 +255,7 @@ body {
 .form__button {
   padding: 1rem 6rem 1rem 6rem;
   border: 1px solid #fff;
-  background: $color-primary;
+  background: #253353;
   border-radius: 64px;
   color: #fff;
   display: flex;
@@ -276,11 +268,10 @@ body {
 
 .form__subscribe {
   color: #fff;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
+}
+.form__subscribe a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .search__form {
@@ -288,9 +279,9 @@ body {
   display: none;
   align-items: center;
   justify-content: end;
-  &.active {
-    display: flex;
-  }
+}
+.search__form.active {
+  display: flex;
 }
 
 .search__form-input {
@@ -305,20 +296,18 @@ body {
   padding: 0.6rem 0.8rem 0.6rem 0.8rem;
   border: none;
   border-radius: 100px;
-  background-color: $color-primaryLight;
+  background-color: #b8dbf1;
   cursor: pointer;
 }
 
-.search-btn {
-  &.active {
-    display: none;
-  }
+.search-btn.active {
+  display: none;
 }
 
 .close-btn {
   display: none;
   background-color: #fff;
-  &.active {
-    display: block;
-  }
 }
+.close-btn.active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
