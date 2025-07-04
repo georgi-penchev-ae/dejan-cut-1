@@ -133,7 +133,7 @@
   display: flex;
   list-style: none;
   gap: 1rem;
-  flex-shrink: 0.4;
+  flex-shrink: 1;
   border-radius: 8px;
 
   @include respond(tab-land) {
@@ -518,7 +518,7 @@
   @include respond(big-phone) {
     top: 10rem;
     right: 11rem;
-    flex-shrink: 0.1;
+    flex-shrink: 1;
   }
 
   @include respond(phone) {
