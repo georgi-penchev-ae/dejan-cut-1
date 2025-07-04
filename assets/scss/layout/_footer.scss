@@ -219,8 +219,7 @@
   align-items: center;
 
   @include respond(phone) {
-    // width: fit-content;
-    flex-direction: column;
+    
   }
 }
 
@@ -231,20 +230,19 @@
   width: fit-content;
   padding: 1rem 2rem;
   border-radius: 8px;
+  
 
   @include respond(phone) {
     padding: 1rem;
-  }
+    flex-wrap: wrap;
+    width: 100%;
+}
 }
 .contaniner-1__list {
   width: 100%;
-  display: inline-block;
+  display: flex;
   text-align: center;
 
-//   @include respond(phone) {
-//     text-align: start;
-   
-// }
 
   &-head {
     padding: 1rem;
@@ -263,7 +261,6 @@
       font-size: 0.8rem;
       text-align: start;
       display: flex;
-    flex-direction: column;
     }
     &:not(:last-child) {
       padding-right: 2rem;

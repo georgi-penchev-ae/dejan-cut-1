@@ -42,7 +42,7 @@
   justify-content: space-between;
 
   @include respond(big-phone) {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
   }
@@ -713,16 +713,3 @@
   padding: 1rem;
 }
 
-// .search__input-menu{
-//   width: 100%;
-
-// }
-// .header__nav-menu-item{
-//   width: 100%;
-
-//   button{
-//     width: 100%;
-//     background-color: $color-primary;
-//     color: #fff;
-//   }
-// }

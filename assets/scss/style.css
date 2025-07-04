@@ -274,12 +274,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 37.5em) {
-  .copyright__container-1 {
-    flex-direction: column;
-  }
-}
-
 .wrap-container {
   text-align: center;
   display: flex;
@@ -292,12 +286,14 @@ body {
 @media (max-width: 37.5em) {
   .wrap-container {
     padding: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
 .contaniner-1__list {
   width: 100%;
-  display: inline-block;
+  display: flex;
   text-align: center;
 }
 .contaniner-1__list-head {
@@ -320,7 +316,6 @@ body {
     font-size: 0.8rem;
     text-align: start;
     display: flex;
-    flex-direction: column;
   }
 }
 .contaniner-1__list-item:not(:last-child) {
@@ -393,7 +388,7 @@ body {
 }
 @media (max-width: 75em) {
   .header__container {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
   }
