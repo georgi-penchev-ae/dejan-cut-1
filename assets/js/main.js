@@ -27,9 +27,7 @@ function setupDropdowns() {
         toggle.classList.remove("active");
         targetButton.classList.remove("active");
         targetDropdown.classList.remove("active");
-      } else {
-        console.log("else test");
-      }
+      } 
     });
   });
 }

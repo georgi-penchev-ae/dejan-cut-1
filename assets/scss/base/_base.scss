@@ -7,13 +7,36 @@
 }
 
 body {
- 
   font-family: "Montserrat", sans-serif;
 }
 
 .container {
   padding: 0 2rem;
-  max-width: 1950px;
+  max-width: 121.87rem;
   margin: auto;
   
+  @include respond(tab-land) {
+    max-width: 106.25rem;
+    padding: 0 2rem;
+    margin: auto;
+  }
+
+  @include respond(tab-port) {
+    max-width: 87.5rem;
+    padding: 0 2rem;
+    margin: auto;
+  }
+
+  @include respond(big-phone){
+    max-width: 75rem;
+    padding: 0 1rem;  
+    margin: auto;
+  }
+
+  @include respond(phone){
+    max-width: 37.5rem;
+    padding: 2rem;
+    margin: auto;
+  }
+
 }
