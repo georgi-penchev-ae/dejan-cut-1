@@ -51,7 +51,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
 }
 
@@ -230,6 +229,11 @@
 
   @include respond(tab-land) {
     gap: 0.5rem;
+    flex-shrink: 1;
+  }
+
+  @include respond(tab-port){
+    flex-shrink: 1;
   }
 
   @include respond(phone) {
@@ -433,12 +437,14 @@
   color: $color-primary;
 }
 
+
 .header__nav-item-form {
   width: 100%;
   .search__form-input {
     width: 100%;
     margin-top: 1rem;
     border-radius: 0;
+ 
   }
   .input__button {
     position: absolute;
@@ -446,23 +452,14 @@
     right: 1.2rem;
   }
   @include respond(big-desktop) {
-      display: flex;
-      right: 10rem;
-    
+    display: none;
   }
   @include respond(tab-land) {
     display: none;
   }
-  @include respond(big-desktop) {
-    display: none;
-  }
+
   @include respond(phone) {
     display: block;
-  }
-}
-
-.header__nav-item {
-  @include respond(phone) {
   }
 }
 
@@ -619,32 +616,30 @@
   align-items: center;
   justify-content: end;
 
+  @include respond(big-desktop) {
+    right: 5.5rem;
+  }
+
   @include respond(tab-land) {
     right: 3rem;
   }
 
   @include respond(big-phone) {
-    right: 11rem;
-  }
-
-  @include respond(phone) {
+    right: 2rem;
   }
 
   &.active {
     display: flex;
     padding-top: 0.5rem;
-    @include respond(big-desktop) {
-    right: 3rem;
-  }
-  @include respond(phone) {
-      display: none;
-  }
-  }
 
+    @include respond(phone) {
+      display: none;
+    }
+  }
 }
 
 .search__form-input {
-  width: 64%;
+  width: 60%;
   padding: 1rem 1rem;
   border: none;
   border-bottom: 2px solid black;
@@ -712,4 +707,3 @@
   top: 11rem;
   padding: 1rem;
 }
-
