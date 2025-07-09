@@ -14,6 +14,7 @@ body {
   padding: 0 2rem;
   max-width: 121.87rem;
   margin: auto;
+  height: auto;
 }
 @media (max-width: 106.25em) {
   .container {
@@ -39,8 +40,17 @@ body {
 @media (max-width: 37.5em) {
   .container {
     max-width: 37.5rem;
-    padding: 2rem;
+    padding: 1rem;
     margin: auto;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .container--phone-size {
+    max-width: 34.5rem;
+    border-radius: 32px;
+    margin: auto;
+    overflow: hidden;
   }
 }
 
@@ -564,11 +574,11 @@ body {
   transform: rotate(-135deg);
 }
 
-.header__button-contact-2 {
+.button.contact-2 {
   display: none;
 }
 @media (max-width: 37.5em) {
-  .header__button-contact-2 {
+  .button.contact-2 {
     background-color: #c2002f;
     width: 100%;
     padding: 1rem 2rem 1rem 2rem;
@@ -607,26 +617,20 @@ body {
   }
 }
 
-.header__button {
+.button.contact,
+.button.login {
   padding: 1rem 2rem 1rem 2rem;
-  border: none;
-  border-radius: 64px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  gap: 0.6rem;
-  cursor: pointer;
 }
 @media (max-width: 106.25em) {
-  .header__button {
+  .button.contact,
+  .button.login {
     font-size: 1rem;
     padding: 1rem;
   }
 }
 @media (max-width: 87.5em) {
-  .header__button {
+  .button.contact,
+  .button.login {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -636,20 +640,19 @@ body {
   }
 }
 @media (max-width: 75em) {
-  .header__button {
+  .button.contact,
+  .button.login {
     font-size: 0.8rem;
   }
 }
 @media (max-width: 87.5em) {
-  .header__button svg {
+  .button.contact svg,
+  .button.login svg {
     width: 1rem;
   }
 }
 
-.login {
-  background: #253353;
-}
-.login[data-dropdown-toggle]::after {
+.button.login[data-dropdown-toggle]::after {
   content: "";
   border: solid #fff;
   border-width: 0 3px 3px 0;
@@ -658,16 +661,16 @@ body {
   transform: rotate(45deg);
 }
 @media (max-width: 87.5em) {
-  .login[data-dropdown-toggle]::after {
+  .button.login[data-dropdown-toggle]::after {
     border-width: 0 2px 2px 0;
   }
 }
 @media (max-width: 37.5em) {
-  .login[data-dropdown-toggle]::after {
+  .button.login[data-dropdown-toggle]::after {
     display: none;
   }
 }
-.login.active::after {
+.button.login.active::after {
   border: solid #fff;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -675,22 +678,19 @@ body {
   transform: rotate(-135deg);
 }
 @media (max-width: 37.5em) {
-  .login.active::after {
+  .button.login.active::after {
     display: none;
   }
 }
 @media (max-width: 37.5em) {
-  .login {
+  .button.login {
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }
 }
 
-.contact {
-  background: #c2002f;
-}
 @media (max-width: 37.5em) {
-  .contact {
+  .button.contact {
     display: none;
   }
 }
@@ -1101,4 +1101,111 @@ body {
   left: 0;
   top: 11rem;
   padding: 1rem;
+}
+
+.button {
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 64px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  gap: 0.6rem;
+  cursor: pointer;
+  background: #253353;
+}
+.button--2 {
+  background: #c2002f;
+}
+.button--3 {
+  border: 1px solid #fff;
+}
+
+.hero__bg {
+  position: relative;
+  background-image: linear-gradient(100deg, #253353 0%, rgba(37, 51, 83, 0.8) 60%, transparent 70%);
+}
+@media (max-width: 106.25em) {
+  .hero__bg {
+    background-image: linear-gradient(100deg, #253353 0%, rgba(37, 51, 83, 0.6) 65%, transparent 80%);
+  }
+}
+@media (max-width: 87.5em) {
+  .hero__bg {
+    background-image: linear-gradient(100deg, #253353 0%, rgba(37, 51, 83, 0.5) 75%, transparent 90%);
+  }
+}
+@media (max-width: 37.5em) {
+  .hero__bg {
+    background-image: linear-gradient(0deg, #253353 0%, rgba(37, 51, 83, 0.9) 45%, rgba(0, 0, 0, 0.2) 65%);
+  }
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.hero__content {
+  max-width: 60rem;
+  padding: 10rem 5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 37.5em) {
+  .hero__content {
+    padding: 15rem 5rem 2.5rem 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .hero__content-text {
+    text-align: center;
+  }
+}
+
+.content-text__heading {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  width: 60rem;
+}
+@media (max-width: 75em) {
+  .content-text__heading {
+    max-width: 35rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 37.5em) {
+  .content-text__heading {
+    max-width: 22rem;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+.content-text__paragaph {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  max-width: 40rem;
+}
+
+.hero__content-buttons {
+  display: flex;
+  gap: 1.2rem;
+}
+@media (max-width: 37.5em) {
+  .hero__content-buttons {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

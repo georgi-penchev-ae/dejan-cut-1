@@ -14,7 +14,10 @@ body {
   padding: 0 2rem;
   max-width: 121.87rem;
   margin: auto;
+  height: auto;
   
+
+
   @include respond(tab-land) {
     max-width: 106.25rem;
     padding: 0 2rem;
@@ -27,16 +30,25 @@ body {
     margin: auto;
   }
 
-  @include respond(big-phone){
+  @include respond(big-phone) {
     max-width: 75rem;
-    padding: 0 1rem;  
+    padding: 0 1rem;
     margin: auto;
+    
   }
-
-  @include respond(phone){
+ @include respond(phone) {
     max-width: 37.5rem;
-    padding: 2rem;
+    padding: 1rem;
     margin: auto;
   }
+  
+}
 
+.container--phone-size{
+  @include respond(phone) {
+    max-width: 34.5rem;    
+    border-radius: 32px;
+    margin: auto;
+    overflow: hidden;
+  }
 }
