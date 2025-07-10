@@ -1439,4 +1439,134 @@ body {
   .blurb__text {
     color: black;
   }
+}
+
+.banner__content {
+  display: flex;
+  margin-bottom: 4rem;
+}
+@media (max-width: 56.25em) {
+  .banner__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.banner__content-left {
+  width: 60%;
+  padding: 0 2rem;
+}
+@media (max-width: 56.25em) {
+  .banner__content-left {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.content-left__img {
+  width: 100%;
+}
+
+.banner__content-right {
+  width: 40%;
+  padding-top: 7rem;
+}
+@media (max-width: 75em) {
+  .banner__content-right button {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .banner__content-right button {
+    width: 90%;
+  }
+}
+@media (max-width: 87.5em) {
+  .banner__content-right {
+    padding-top: 2.5rem;
+  }
+}
+@media (max-width: 75em) {
+  .banner__content-right {
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .banner__content-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.content-right__head {
+  margin-bottom: 2rem;
+}
+@media (max-width: 56.25em) {
+  .content-right__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 37.5em) {
+  .content-right__head {
+    margin-bottom: 0;
+  }
+}
+
+.content-right__heading {
+  font-size: 4rem;
+  color: #253353;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  width: 90%;
+}
+@media (max-width: 75em) {
+  .content-right__heading {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .content-right__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.content-right__heading-small {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+@media (max-width: 75em) {
+  .content-right__heading-small {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.content-right__text {
+  width: 90%;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+@media (max-width: 75em) {
+  .content-right__text {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
