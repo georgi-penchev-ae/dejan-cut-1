@@ -28,8 +28,8 @@
     background-image: linear-gradient(
       0deg,
       rgba($color-primary, 1) 0%,
-      rgba($color-primary, .9) 45%,
-      rgba(black,.2) 65%
+      rgba($color-primary, 0.9) 45%,
+      rgba(black, 0.2) 65%
     );
   }
 }
@@ -64,11 +64,19 @@
   margin-bottom: 2.5rem;
   font-weight: 600;
   width: 60rem;
+
   @include respond(big-phone) {
     max-width: 35rem;
     font-size: 3rem;
     font-weight: 500;
   }
+
+  @include respond(medium-phone) {
+    max-width: 30rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
   @include respond(phone) {
     max-width: 22rem;
     font-size: 3rem;
@@ -81,11 +89,19 @@
   margin-bottom: 2.5rem;
   font-weight: 300;
   max-width: 40rem;
+
+   @include respond(medium-phone) {
+    max-width: 30rem;
+    font-size: 1rem;
+  }
+
 }
 
 .hero__content-buttons {
   display: flex;
   gap: 1.2rem;
+
+  
 
   @include respond(phone) {
     flex-direction: column;

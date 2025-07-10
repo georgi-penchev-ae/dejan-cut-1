@@ -16,6 +16,7 @@ body {
   max-width: 121.87rem;
   margin: auto;
   height: auto;
+
   
 
 
@@ -37,10 +38,31 @@ body {
     margin: auto;
     
   }
+   @include respond(bigger-phone) {
+    max-width: 68.75rem;
+    padding: 0 1rem;
+    margin: auto;
+    
+  }
+   @include respond(medium-phone) {
+    max-width: 56.25rem;
+    padding: 0 1rem;
+    margin: auto;
+    
+  }
  @include respond(phone) {
     max-width: 37.5rem;
     padding: 1rem;
     margin: auto;
+  }
+
+  &--contents{
+    @include respond(phone) {
+    max-width: 37.5rem;
+    padding: 1rem;
+    margin: auto;
+    display: contents;
+  }
   }
   
 }

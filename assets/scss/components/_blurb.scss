@@ -8,13 +8,15 @@
   box-shadow: 0.5rem 0.5rem 10px rgba(black, 0.2);
   display: flex;
 
-  @include respond(big-phone) {
+  @include respond(medium-phone) {
     padding: 2rem;
+    flex-direction: column;
   }
 
   @include respond(phone) {
     flex-direction: column;
     padding: 1rem;
+    box-shadow: none;
   }
 }
 
@@ -27,9 +29,13 @@
     width: 60%;
   }
 
+  @include respond(medium-phone) {
+    width: 100%;
+  }
+
   @include respond(phone) {
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
   }
 
   &-img {
@@ -43,12 +49,21 @@
 .content__right {
   width: 60%;
   padding: 1.5rem 4rem;
+  
+  @include respond(medium-phone) {
+    padding: 1rem 1rem;
+    width: 100%;
+      button {
+      justify-self: center;
+      width: 80%;
+    }
+  }
 
   @include respond(phone) {
     width: 100%;
-    padding: 1rem 1.5rem;
-    button{
-        width: 100%;
+    padding: 1rem 1rem;
+    button {
+      width: 100%;
     }
   }
 }
@@ -60,6 +75,10 @@
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
+
+    @include respond(medium-phone) {
+      font-size: 2.5rem;
+    }
 
     @include respond(phone) {
       font-size: 2rem;
@@ -74,7 +93,7 @@
     }
 
     @include respond(phone) {
-        color: black;
+      color: black;
     }
   }
 }
@@ -84,11 +103,10 @@
   margin-top: 1.5rem;
   gap: 5rem;
 
-        
-  @include respond(phone){
+
+  @include respond(phone) {
     flex-direction: column;
     gap: 0;
-    
   }
 }
 
@@ -100,8 +118,6 @@
 .blurbs-right {
   display: flex;
   flex-direction: column;
-
-        
 }
 
 .blurb__name {
@@ -110,8 +126,8 @@
   font-size: 1.5rem;
   color: $color-primary;
   font-weight: 600;
-  @include respond(phone){
-   color: black; 
+  @include respond(phone) {
+    color: black;
   }
 }
 
@@ -121,10 +137,7 @@
   font-weight: 300;
   color: $color-primary;
 
-        
-  @include respond(phone){
-   color: black;
-    
+  @include respond(phone) {
+    color: black;
   }
 }
-

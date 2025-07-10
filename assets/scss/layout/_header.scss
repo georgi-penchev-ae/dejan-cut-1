@@ -1,3 +1,7 @@
+.header__bg{
+  background-color: #fff;
+}
+
 .header {
   padding: 2rem 1rem;
   background-color: #fff;
@@ -29,6 +33,12 @@
     align-items: center;
     justify-content: space-between;
 
+    @include respond(medium-phone) {
+      flex-wrap: wrap;
+      padding: 1rem;
+      justify-content: center;
+    }
+
     @include respond(phone) {
       flex-direction: row-reverse;
       padding: 1rem;
@@ -41,8 +51,14 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
   @include respond(big-phone) {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
@@ -58,7 +74,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-shrink: 1;
   gap: 1rem;
 
   @include respond(big-desktop) {
@@ -78,7 +93,7 @@
     }
   }
   @include respond(tab-port) {
-    width: 18%;
+    width: 100%;
     gap: 0.25rem;
   }
 
@@ -120,10 +135,11 @@
     display: block;
     @include respond(phone) {
       position: absolute;
-      top: 12rem;
+      top: 11rem;
       left: 0;
       width: 100%;
       background-color: $color-primary;
+      z-index: 20;
     }
   }
 }
@@ -310,9 +326,6 @@
   }
 }
 
-.header__search-container {
-  padding: 1rem;
-}
 
 .header__button-search {
   padding: 0.6rem 0.8rem 0.6rem 0.8rem;
@@ -432,6 +445,7 @@
     width: 100%;
     margin-top: 1rem;
     border-radius: 0;
+    
   }
   .input__button {
     position: absolute;
