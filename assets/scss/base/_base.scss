@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.container {
+  padding: 0 2rem;
+  max-width: 121.87rem;
+  margin: auto;
+  height: auto;
+
+  
+
+
+  @include respond(tab-land) {
+    max-width: 106.25rem;
+    padding: 0 2rem;
+    margin: auto;
+  }
+
+  @include respond(tab-port) {
+    max-width: 87.5rem;
+    padding: 0 2rem;
+    margin: auto;
+  }
+
+  @include respond(big-phone) {
+    max-width: 75rem;
+    padding: 0 1rem;
+    margin: auto;
+    
+  }
+   @include respond(bigger-phone) {
+    max-width: 68.75rem;
+    padding: 0 1rem;
+    margin: auto;
+    
+  }
+   @include respond(medium-phone) {
+    max-width: 56.25rem;
+    padding: 0 1rem;
+    margin: auto;
+    
+  }
+ @include respond(phone) {
+    max-width: 37.5rem;
+    padding: 1rem;
+    margin: auto;
+  }
+
+  &--contents{
+    @include respond(phone) {
+    max-width: 37.5rem;
+    padding: 1rem;
+    margin: auto;
+    display: contents;
+  }
+  }
+  
+}
+
+.container--phone-size{
+  @include respond(phone) {
+    max-width: 34.5rem;    
+    border-radius: 32px;
+    margin: auto;
+    overflow: hidden;
+  }
+}

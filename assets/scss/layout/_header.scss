@@ -1,0 +1,710 @@
+.header__bg{
+  background-color: #fff;
+}
+
+.header {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  width: 100%;
+
+  @include respond(big-desktop) {
+    .img-fdic__small-screens {
+      display: none;
+    }
+  }
+
+  @include respond(tab-land) {
+    .img-fdic__small-screens {
+      display: none;
+    }
+  }
+  @include respond(phone) {
+    .img-fdic__small-screens {
+      display: block;
+      padding: 1rem 1rem;
+      width: 100%;
+    }
+
+    padding: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(medium-phone) {
+      flex-wrap: wrap;
+      padding: 1rem;
+      justify-content: center;
+    }
+
+    @include respond(phone) {
+      flex-direction: row-reverse;
+      padding: 1rem;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include respond(big-phone) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include respond(phone) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include respond(big-desktop) {
+    .img-fdic__small-screens {
+      display: none;
+    }
+    .img__small-screens {
+      display: none;
+    }
+  }
+
+  @include respond(tab-land) {
+    width: 25%;
+    gap: 0.25rem;
+    .img__small-screens {
+      display: none;
+    }
+  }
+  @include respond(tab-port) {
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  @include respond(big-phone) {
+    width: 40%;
+    gap: 1rem;
+  }
+
+  @include respond(phone) {
+    .img__big-screens {
+      display: none;
+    }
+    .img-fdic__big-screens {
+      display: none;
+    }
+    .img__small-screens {
+      display: block;
+    }
+    display: flex;
+    align-items: start;
+    padding: 0 1rem;
+  }
+
+  &-img {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.header__nav-list-links {
+  display: flex;
+
+  @include respond(phone) {
+    display: none;
+  }
+  &.active {
+    display: block;
+    @include respond(phone) {
+      position: absolute;
+      top: 11rem;
+      left: 0;
+      width: 100%;
+      background-color: $color-primary;
+      z-index: 20;
+    }
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-shrink: 1;
+  border-radius: 8px;
+
+  @include respond(tab-land) {
+    gap: 0.5rem;
+  }
+
+  @include respond(tab-port) {
+    gap: 0.1rem;
+  }
+
+  @include respond(big-phone) {
+    gap: 0.5rem;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+.header__nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font: inherit;
+  border: none;
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  @include respond(tab-land) {
+    gap: 0.5rem;
+  }
+
+  @include respond(big-phone) {
+    font-size: 0.8rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    background-color: $color-primary;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &[data-dropdown-toggle]::after {
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    @include respond(phone) {
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+  }
+  &.active {
+    &::after {
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.button.contact-2 {
+  display: none;
+  @include respond(phone) {
+    background-color: $color-secondary;
+    width: 100%;
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    border-radius: 64px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 0.6rem;
+  }
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  @include respond(tab-land) {
+    gap: 0.5rem;
+    flex-shrink: 1;
+  }
+
+  @include respond(tab-port) {
+    flex-shrink: 1;
+  }
+
+  @include respond(phone) {
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.button.contact,
+.button.login {
+  padding: 1rem 2rem 1rem 2rem;
+
+  @include respond(tab-land) {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    font-size: 1rem;
+  }
+
+  @include respond(big-phone) {
+    font-size: 0.8rem;
+  }
+
+  svg {
+    @include respond(tab-port) {
+      width: 1rem;
+    }
+  }
+}
+
+.button.login {
+  &[data-dropdown-toggle]::after {
+    content: "";
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+
+    @include respond(tab-port) {
+      border-width: 0 2px 2px 0;
+    }
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &.active::after {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  @include respond(phone) {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.button.contact {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+
+.header__button-search {
+  padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+  border: none;
+  border-radius: 100px;
+  background-color: $color-primary-light;
+  cursor: pointer;
+  .header__button-search-close-btn {
+    display: none;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+
+  &.active {
+    background-color: #fff;
+    .header__button-search-btn {
+      display: none;
+    }
+    .header__button-search-close-btn {
+      display: block;
+    }
+  }
+}
+
+.header__dropdown {
+  display: none;
+  position: absolute;
+  background: $color-primary;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  list-style: none;
+  z-index: 10;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  width: 250px;
+  &.active {
+    display: block;
+  }
+
+  @include respond(phone) {
+    width: 95%;
+    background-color: #1c2740;
+    border: none;
+  }
+}
+
+.header__dropdown-item {
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  &-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background-color: $color-primary;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+
+    @include respond(phone) {
+      width: 100%;
+      background-color: #1c2740;
+    }
+
+    &[data-dropdown-toggle]::after {
+      content: "";
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      width: 8px;
+      height: 8px;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: $color-primary;
+      border-radius: 4px;
+      &::after {
+        border: solid $color-primary;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    background-color: #1c2740;
+  }
+}
+
+.header__dropdown-item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  text-align: left;
+}
+.header__dropdown-item a:hover {
+  color: $color-primary;
+}
+
+.header__nav-item-form {
+  width: 100%;
+  .search__form-input {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 0;
+    
+  }
+  .input__button {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+  @include respond(big-desktop) {
+    display: none;
+  }
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.doropdown__submenu-container {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: $color-primary;
+  border-radius: 8px;
+  width: 200px;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.dropdown__submenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.dropdown__submenu-item {
+  text-align: start;
+  color: #fff;
+}
+
+.login__container {
+  display: none;
+  position: absolute;
+  top: 6.8rem;
+  right: 8.2rem;
+  background: $color-primary;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  z-index: 10;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  width: 300px;
+
+  @include respond(tab-land) {
+    top: 6rem;
+    right: 5rem;
+  }
+  @include respond(tab-port) {
+    top: 6rem;
+    right: 4rem;
+  }
+
+  @include respond(big-phone) {
+    top: 10rem;
+    right: 11rem;
+    flex-shrink: 1;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    top: 11rem;
+    right: 0;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.login__form {
+  @include respond(phone) {
+    padding: 1rem;
+  }
+}
+#dropdown-select {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+  @include respond(phone) {
+    padding: 0.8rem;
+  }
+}
+.dropdown__labels {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem;
+  margin-bottom: 0.8rem;
+
+  @include respond(phone) {
+    padding: 1rem;
+  }
+}
+
+.form__forgotpassword {
+  border: none;
+  background-color: inherit;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+.button__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__button {
+  padding: 1rem 6rem 1rem 6rem;
+  border: 1px solid #fff;
+  background: $color-primary;
+  border-radius: 64px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.8rem;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.form__subscribe {
+  color: #fff;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  @include respond(phone) {
+    padding: 1rem;
+  }
+}
+
+.search__form {
+  position: absolute;
+  width: 80%;
+  margin-right: 1rem;
+  display: none;
+  align-items: center;
+  justify-content: end;
+
+  @include respond(big-desktop) {
+    right: 5.5rem;
+  }
+
+  @include respond(tab-land) {
+    right: 3rem;
+  }
+
+  @include respond(big-phone) {
+    right: 2rem;
+  }
+
+  &.active {
+    display: flex;
+    padding-top: 0.5rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+.search__form-input {
+  width: 60%;
+  padding: 1rem 1rem;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 8px;
+}
+
+.input__button {
+  border: none;
+  padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+  border: none;
+  border-radius: 100px;
+  background-color: $color-primary-light;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  position: relative;
+  text-align: center;
+  &,
+  &::before,
+  &::after {
+    width: 1.5rem;
+    height: 3px;
+    background-color: $color-primary;
+    display: inline-block;
+    border-radius: 3px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -0.1rem;
+  }
+
+  &::before {
+    top: -0.5rem;
+  }
+
+  &::after {
+    top: 0.4rem;
+  }
+
+  @include respond(big-desktop) {
+    display: none;
+  }
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  @include respond(big-phone) {
+    display: none;
+  }
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.nav__container {
+  position: absolute;
+  width: 100%;
+  background-color: $color-primary;
+  left: 0;
+  top: 11rem;
+  padding: 1rem;
+}
