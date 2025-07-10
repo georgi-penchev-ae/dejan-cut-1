@@ -74,4 +74,10 @@ body {
     margin: auto;
     overflow: hidden;
   }
+
+  &--overflow{
+     @include respond(phone) {
+      overflow: visible;
+     }
+  }
 }
