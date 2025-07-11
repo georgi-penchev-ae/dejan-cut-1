@@ -19,6 +19,7 @@
     border: 1px solid #fff;
   }
   &--4 {
+    border: 1px solid $color-secondary;
     padding: 1rem 2rem;
     background: $color-secondary;
   }
@@ -26,7 +27,9 @@
   &.swiper-button-disabled {
     background-color: transparent;
     color: black;
+    box-sizing: border-box;
     border: 1px solid black;
+    outline: black;
     padding: 1rem 2rem;
   }
 }

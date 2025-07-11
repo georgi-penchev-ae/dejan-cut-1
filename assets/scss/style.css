@@ -1188,13 +1188,16 @@ body {
   border: 1px solid #fff;
 }
 .button--4 {
+  border: 1px solid #c2002f;
   padding: 1rem 2rem;
   background: #c2002f;
 }
 .button.swiper-button-disabled {
   background-color: transparent;
   color: black;
+  box-sizing: border-box;
   border: 1px solid black;
+  outline: black;
   padding: 1rem 2rem;
 }
 
