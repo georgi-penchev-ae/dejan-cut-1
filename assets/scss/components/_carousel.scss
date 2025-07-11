@@ -1,0 +1,156 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  @include respond(phone) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.carousel__heading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: $color-primary;
+
+  @include respond(medium-phone) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.buttons__container {
+  display: flex;
+  gap: 8px;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.cards {
+  border-radius: 24px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.card__container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  .card__content {
+    height: 100%;
+    position: relative;
+
+    .article__container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: end;
+      margin-bottom: 15rem;
+
+      .article__button {
+        font-family: "Montserrat", sans-serif;
+        padding: 1rem 1rem;
+        letter-spacing: 3px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid black;
+        font-size: .8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(
+        0deg,
+        rgba($color-primary, 1) 0%,
+        rgba($color-primary, 0.9) 45%,
+        rgba(black, 0.2) 65%
+      );
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .card__heading {
+      position: relative;
+      z-index: 10;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 600;
+
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .card__text {
+      position: relative;
+      color: #fff;
+      z-index: 10;
+      font-family: "Outfit", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+    }
+    .card__button {
+      position: relative;
+      z-index: 10;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      &::after {
+        content: "";
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 16px;
+  border-radius: 24px;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  transition: all 0.2s ease-in;
+}
+.swiper-pagination-bullet-active {
+  background-color: $color-primary;
+  width: 54px;
+  height: 16px;
+  border-radius: 24px;
+  border: 2px solid $color-primary;
+}

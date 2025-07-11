@@ -8,16 +8,14 @@
 
   @include respond(phone) {
     padding: 4rem 0;
-
-}
+  }
 }
 
 .content__head {
   margin-bottom: 4rem;
-   @include respond(phone) {
+  @include respond(phone) {
     margin-bottom: 2rem;
-   }
-
+  }
 }
 
 .head__heading {
@@ -25,9 +23,9 @@
   font-weight: 600;
   color: $color-primary;
 
-   @include respond(phone) {
+  @include respond(phone) {
     font-size: 2rem;
-   }
+  }
 }
 
 .cards__container {
@@ -38,9 +36,9 @@
   @include respond(medium-phone) {
     flex-direction: column;
   }
-   @include respond(phone) {
-    gap:1.5rem
-   }
+  @include respond(phone) {
+    gap: 1.5rem;
+  }
 }
 
 .card {
@@ -59,11 +57,9 @@
     margin-bottom: 1.5rem;
   }
 
-   @include respond(phone) {
+  @include respond(phone) {
     padding: 2rem 1.5rem;
-   }
-
-
+  }
 }
 
 .card__heading {
