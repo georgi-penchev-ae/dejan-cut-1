@@ -1,0 +1,96 @@
+.cards__bg {
+  background-color: $color-primary-light;
+  margin-bottom: 4rem;
+}
+
+.cards__content {
+  padding: 7rem 2rem;
+
+  @include respond(phone) {
+    padding: 4rem 0;
+  }
+}
+
+.content__head {
+  margin-bottom: 4rem;
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
+}
+
+.head__heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: $color-primary;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.cards__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @include respond(medium-phone) {
+    flex-direction: column;
+  }
+  @include respond(phone) {
+    gap: 1.5rem;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 24px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  padding: 2rem;
+
+  *:not(:last-child):not(:first-child) {
+    margin-bottom: 2rem;
+  }
+  svg {
+    margin-bottom: 1.5rem;
+  }
+
+  @include respond(phone) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.card__heading {
+  font-size: 2rem;
+  color: $color-primary;
+
+  @include respond(bigger-phone) {
+    font-size: 1.5rem;
+  }
+}
+.card__text {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 300;
+}
+
+.card__button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  &::after {
+    content: "";
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    margin-left: 8px;
+  }
+}

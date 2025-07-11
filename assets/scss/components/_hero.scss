@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   @include respond(phone) {
-    padding: 15rem 5rem 2.5rem 5rem;
+    padding: 15rem 2.5rem 2.5rem 2.5rem;
   }
 }
 
@@ -78,8 +78,8 @@
   }
 
   @include respond(phone) {
-    max-width: 22rem;
-    font-size: 3rem;
+    width: 100%;
+    font-size: 2rem;
     font-weight: 600;
   }
 }
@@ -90,18 +90,19 @@
   font-weight: 300;
   max-width: 40rem;
 
-   @include respond(medium-phone) {
+  @include respond(medium-phone) {
     max-width: 30rem;
     font-size: 1rem;
   }
-
+  @include respond(phone) {
+    max-width: 100%;
+    font-size: 1rem;
+  }
 }
 
 .hero__content-buttons {
   display: flex;
   gap: 1.2rem;
-
-  
 
   @include respond(phone) {
     flex-direction: column;
