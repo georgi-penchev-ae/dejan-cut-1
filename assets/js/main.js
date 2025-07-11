@@ -64,7 +64,14 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-   
+  
+  // Navigation arrows
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-previous",
+  },
+
+  
 });
 
 
