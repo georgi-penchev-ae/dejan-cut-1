@@ -1,6 +1,8 @@
 .swiper {
   width: 100%;
   height: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .carousel__header {
@@ -8,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
 
   @include respond(phone) {
     margin-bottom: 2.5rem;
@@ -20,7 +24,7 @@
   color: $color-primary;
 
   @include respond(medium-phone) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   @include respond(phone) {
@@ -53,7 +57,7 @@
 .card__container {
   display: flex;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   .card__content {
     height: 100%;
@@ -64,7 +68,7 @@
       z-index: 10;
       display: flex;
       justify-content: end;
-      margin-bottom: 15rem;
+      margin-bottom: 30rem;
 
       .article__button {
         font-family: "Montserrat", sans-serif;
@@ -76,6 +80,11 @@
         font-size: .8rem;
         font-weight: 600;
         text-transform: uppercase;
+        cursor: pointer;
+        transition: all .2s ease;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
     }
 
@@ -126,10 +135,15 @@
       color: #fff;
       font-weight: 600;
       font-size: 1rem;
+      border-bottom: 1px solid transparent;
+
+      &:hover{
+        text-decoration: underline;
+      }
       &::after {
         content: "";
         border: solid #fff;
-        border-width: 0 2px 2px 0;
+        border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;
         transform: rotate(-45deg);
@@ -146,6 +160,7 @@
   background-color: transparent;
   border: 2px solid $color-primary;
   transition: all 0.2s ease-in;
+
 }
 .swiper-pagination-bullet-active {
   background-color: $color-primary;
@@ -154,3 +169,6 @@
   border-radius: 24px;
   border: 2px solid $color-primary;
 }
+
+
+

@@ -1,11 +1,25 @@
-.header__bg{
+.header__bg {
   background-color: #fff;
+  height: 10.5rem;
+
+  @include respond(tab-port) {
+    height: 15rem;
+  }
+
+  @include respond(medium-phone) {
+    height: 18rem;
+  }
+
+  @include respond(phone) {
+    height: 12rem;
+  }
 }
 
 .header {
   padding: 2rem 1rem;
   background-color: #fff;
   width: 100%;
+  position: relative;
 
   @include respond(big-desktop) {
     .img-fdic__small-screens {
@@ -32,16 +46,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     @include respond(medium-phone) {
       flex-wrap: wrap;
       padding: 1rem;
       justify-content: center;
+      gap: 1rem;
     }
 
     @include respond(phone) {
       flex-direction: row-reverse;
       padding: 1rem;
+      position: static;
+      gap: 0;
     }
   }
 }
@@ -136,7 +154,7 @@
     @include respond(phone) {
       position: absolute;
       top: 11rem;
-      left: 0;
+      right: 0;
       width: 100%;
       background-color: $color-primary;
       z-index: 20;
@@ -179,8 +197,13 @@
   font-size: 1rem;
   padding: 1rem 0.5rem;
   font-weight: 600;
+  color: $color-primary;
   cursor: pointer;
+  transition: all 0.2s ease;
 
+  &:hover {
+    transform: scale(1.1);
+  }
   @include respond(tab-land) {
     gap: 0.5rem;
   }
@@ -196,6 +219,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &:hover {
+      transform: none;
+    }
   }
 
   &[data-dropdown-toggle]::after {
@@ -254,7 +280,6 @@
 
   @include respond(phone) {
     gap: 1rem;
-    padding: 1rem;
   }
 }
 
@@ -326,13 +351,18 @@
   }
 }
 
-
 .header__button-search {
   padding: 0.6rem 0.8rem 0.6rem 0.8rem;
   border: none;
   border-radius: 100px;
   background-color: $color-primary-light;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
   .header__button-search-close-btn {
     display: none;
   }
@@ -375,6 +405,7 @@
 }
 
 .header__dropdown-item {
+  position: relative;
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
   &-btn {
@@ -445,7 +476,6 @@
     width: 100%;
     margin-top: 1rem;
     border-radius: 0;
-    
   }
   .input__button {
     position: absolute;
@@ -474,6 +504,15 @@
   display: none;
   &.active {
     display: block;
+
+    @include respond(phone) {
+      position: absolute;
+      left: 0;
+      top: 3rem;
+      padding: .5rem 0;
+      z-index: 10;
+      width: 100%;
+    }
   }
 }
 .dropdown__submenu {
@@ -484,6 +523,12 @@
   align-items: start;
   padding: 1rem;
   gap: 1rem;
+
+
+  @include respond(phone) {
+      gap: 2rem;
+    }
+
 }
 
 .dropdown__submenu-item {
@@ -494,8 +539,8 @@
 .login__container {
   display: none;
   position: absolute;
-  top: 6.8rem;
-  right: 8.2rem;
+  top: 3.5rem;
+  right: 0rem;
   background: $color-primary;
   margin-top: 0.5rem;
   padding: 1rem;
@@ -504,24 +549,14 @@
   font-family: "Montserrat", sans-serif;
   width: 300px;
 
-  @include respond(tab-land) {
-    top: 6rem;
-    right: 5rem;
-  }
-  @include respond(tab-port) {
-    top: 6rem;
-    right: 4rem;
-  }
-
-  @include respond(big-phone) {
-    top: 10rem;
-    right: 11rem;
-    flex-shrink: 1;
+  @include respond(medium-phone) {
+    top: 7rem;
+    right: 17rem;
   }
 
   @include respond(phone) {
     width: 100%;
-    top: 11rem;
+    top: 10rem;
     right: 0;
   }
 
@@ -591,6 +626,7 @@
   gap: 0.5rem;
   cursor: pointer;
   margin-bottom: 0.8rem;
+  transition: all 0.2s ease;
 
   @include respond(phone) {
     width: 100%;
@@ -611,22 +647,22 @@
 
 .search__form {
   position: absolute;
-  width: 80%;
-  margin-right: 1rem;
+  width: 100%;
   display: none;
   align-items: center;
   justify-content: end;
+  right: 0;
+  top: 4rem;
+  background-color: #fff;
+  z-index: 10;
+  border-bottom: 2px solid black;
 
-  @include respond(big-desktop) {
-    right: 5.5rem;
+  @include respond(tab-port) {
+    top: 4rem;
   }
 
-  @include respond(tab-land) {
-    right: 3rem;
-  }
-
-  @include respond(big-phone) {
-    right: 2rem;
+  @include respond(medium-phone) {
+    top: 8rem;
   }
 
   &.active {
@@ -640,11 +676,11 @@
 }
 
 .search__form-input {
-  width: 60%;
+  width: 100%;
   padding: 1rem 1rem;
   border: none;
-  border-bottom: 2px solid black;
-  border-radius: 8px;
+  // border-bottom: 2px solid black;
+  // border-radius: 8px;
 }
 
 .input__button {
