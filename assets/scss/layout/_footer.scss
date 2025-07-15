@@ -192,8 +192,12 @@
       &:not(:last-child) {
         padding-bottom: 1rem;
       }
-
     }
+  }
+}
+.container__list-items--dark-blue-span-1 {
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -289,16 +293,40 @@
 .container__copy-icon {
   display: flex;
   gap: 2px;
-  svg{
+  cursor: pointer;
+  svg {
     flex-shrink: 0;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
-  &-2{
-    padding-top: .3rem;
+  &-2 {
+    padding-top: 0.3rem;
   }
 }
 
-#content1::after{
-    content: "\a";
-    white-space: pre;
+.container__social-icons{
+  list-style: none;
+  display: flex;
+  margin-top: 1rem;
+  gap: .5rem;
+}
+
+.social-icons {
+  text-decoration: none;
+  display: block;
+  svg {
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: scale(1.2);
+      text-decoration: none; 
+    }
+  }
+  }
+
+#content1::after {
+  content: "\a";
+  white-space: pre;
 }

@@ -1,6 +1,6 @@
 .cards__bg {
   background-color: $color-primary-light;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .cards__content {
@@ -82,8 +82,15 @@
   border: none;
   display: flex;
   align-items: center;
+  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+
+  &:hover{
+    text-decoration: underline;
+  }
   &::after {
     content: "";
     border: solid black;
@@ -91,6 +98,8 @@
     display: inline-block;
     padding: 3px;
     transform: rotate(-45deg);
-    margin-left: 8px;
+    margin-left: 4px;
   }
+
+  
 }
