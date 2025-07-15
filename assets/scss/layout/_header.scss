@@ -550,8 +550,8 @@
   width: 300px;
 
   @include respond(medium-phone) {
-    top: 7rem;
-    right: 17rem;
+    top: 8.8rem;
+    right: 10rem;
   }
 
   @include respond(phone) {

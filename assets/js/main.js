@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", setupDropdowns);
 
 const swiper = new Swiper(".swiper", {
  
-
   slidesPerView: 1,
   spaceBetween:30,
   breakpoints: {
@@ -46,11 +45,15 @@ const swiper = new Swiper(".swiper", {
       slidesPerView: 1,
       spaceBetween: 10
     },
-     750: {
+     800: {
       slidesPerView: 2,
       spaceBetween: 20
     },
      1100: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1200: {
       slidesPerView: 3,
       spaceBetween: 20
     },
@@ -60,6 +63,7 @@ const swiper = new Swiper(".swiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   
   // Navigation arrows
